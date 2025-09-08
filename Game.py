@@ -81,7 +81,7 @@ player_width = 200
 player = pygame.Rect(screen_width/2 - 45, screen_height - 20, player_width, player_height)  # Player paddle
 
 # Game Variables
-ball_speed_x = 0
+ball_speed_x = 5
 ball_speed_y = 0
 player_speed = 0
 
@@ -95,7 +95,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "John Doe"
+    name = "Sebastián Colón"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
