@@ -1,3 +1,4 @@
+
 import pygame, sys, random
 
 def ball_movement():
@@ -24,7 +25,9 @@ def ball_movement():
             # TODO Task 2: Fix score to increase by 1
             score += 1  # Increase player score
             ball_speed_y *= -1  # Reverse ball's vertical direction
+            hit_sound.play()
             # TODO Task 6: Add sound effects HERE
+
 
     # Ball collision with top boundary
     if ball.top <= 0:
@@ -62,7 +65,13 @@ def restart():
 # General setup
 pygame.mixer.pre_init(44100, -16, 1, 1024)
 pygame.init()
+
+
+hit_sound = pygame.mixer.Sound("hit.wav")
+hit_sound.set_volume(0.5)
+
 clock = pygame.time.Clock()
+
 
 # Main Window setup
 screen_width = 500  # Screen width (can be adjusted)
@@ -81,7 +90,7 @@ player_width = 200
 player = pygame.Rect(screen_width/2 - 45, screen_height - 20, player_width, player_height)  # Player paddle
 
 # Game Variables
-ball_speed_x = 5
+ball_speed_x = 0
 ball_speed_y = 0
 player_speed = 0
 
@@ -95,7 +104,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "Sebastián Colón"
+    name = "Your name"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
