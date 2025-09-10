@@ -67,8 +67,7 @@ pygame.mixer.pre_init(44100, -16, 1, 1024)
 pygame.init()
 
 
-hit_sound = pygame.mixer.Sound("hit.wav")
-hit_sound.set_volume(0.5)
+
 
 clock = pygame.time.Clock()
 
