@@ -65,12 +65,7 @@ def restart():
 # General setup
 pygame.mixer.pre_init(44100, -16, 1, 1024)
 pygame.init()
-
-
-
-
 clock = pygame.time.Clock()
-
 
 # Main Window setup
 screen_width = 500  # Screen width (can be adjusted)
@@ -103,7 +98,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "Your name"
+    name = "Sebastián Colón"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
